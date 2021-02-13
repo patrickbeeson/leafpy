@@ -1,5 +1,5 @@
 """
-Logging in basically means getting the custom_sessionid and VIN, which are used to make 
+Logging in basically means getting the custom_sessionid and VIN, which are used to make
 every subsequent request.
 """
 
@@ -15,7 +15,7 @@ def login(username, password, region_code='NNA', initial_app_strings='9s5rfKVuMr
 	encryptedPassword = c1.encrypt(packedPassword.encode('latin-1'))
 	encodedPassword = base64.standard_b64encode(encryptedPassword)
 
-	url = "https://gdcportalgw.its-mo.com/api_v190426_NE/gdc/UserLoginRequest.php"
+	url = "https://gdcportalgw.its-mo.com/api_v181217_NE/gdc/UserLoginRequest.php"
 	data = {
 		"RegionCode": region_code,
 		"UserId": username,
